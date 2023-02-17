@@ -1,0 +1,134 @@
+:root {
+    --color-background-and-a: #fff;
+    --color-all-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --color-title-and-bodybackground: hsl(0, 0%, 95%);
+    --color-background-sedans: hsl(31, 77%, 52%);
+    --color-background-suvs: hsl(184, 100%, 22%);
+    --color-background-luxury: hsl(179, 100%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--color-title-and-bodybackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    color: var(--color-title-and-bodybackground);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+p,
+a {
+    font-family: 'Lexend Deca';
+    font-size: 14px;
+}
+
+p {
+    color: var(--color-all-paragraphs);
+    padding-bottom: 80px;
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+a {
+    background: var(--color-background-and-a);
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 150px 0 150px;
+    height: 65vh;
+}
+
+.description-sedans,
+.description-suvs,
+.description-luxury {
+    padding: 50px;
+    width: 300px;
+}
+
+.description-sedans {
+    background: var(--color-background-sedans);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.button-sedan {
+    color: var(--color-background-sedans);
+}
+
+.description-suvs {
+    background: var(--color-background-suvs);
+}
+
+.button-suvs {
+    color: var(--color-background-suvs);
+}
+
+.description-luxury {
+    background: var(--color-background-luxury);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.button-luxury {
+    color: var(--color-background-luxury);
+}
+
+a:hover {
+    background-color: transparent;
+    color: var(--color-background-and-a);
+    border: 2px solid var(--color-background-and-a);
+}
+
+/* Responsivo Mobile */
+@media (max-width: 600px) {    
+    h1 {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 2rem;
+    }
+    
+    p {
+        padding-bottom: 40px;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .description-sedans {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .description-luxury {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+    }
+}
