@@ -14,6 +14,8 @@
 }
 
 body {
+    font-family: 'Lexend Deca';
+    font-size: 14px;
     height: 100vh;
     background: var(--color-title-and-bodybackground);
     display: flex;
@@ -31,35 +33,26 @@ h1 {
     padding-bottom: 30px;
 }
 
-p,
-a {
-    font-family: 'Lexend Deca';
-    font-size: 14px;
-}
-
 p {
     color: var(--color-all-paragraphs);
-    padding-bottom: 80px;
+    padding-bottom: 16px;
     line-height: 1.5rem;
     letter-spacing: 0.0125rem;
 }
 
-span {
-    text-transform: uppercase;
-}
-
 a {
     background: var(--color-background-and-a);
-    padding: 12px 24px;
+    padding: 16px 32px;
     border-radius: 24px;
     text-decoration: none;
+    display: block;
+    width: fit-content;
 }
 
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 150px 0 150px;
-    height: 65vh;
 }
 
 .description-sedans,
@@ -67,6 +60,10 @@ a {
 .description-luxury {
     padding: 50px;
     width: 300px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .description-sedans {
@@ -104,7 +101,12 @@ a:hover {
 }
 
 /* Responsivo Mobile */
-@media (max-width: 600px) {    
+@media (max-width: 920px) {
+    body {
+        height: auto;
+        margin: 80px 0;
+    }
+
     h1 {
         padding-bottom: 20px;
         padding-top: 20px;
@@ -119,6 +121,13 @@ a:hover {
         display: grid;
         grid-template-columns: 1fr;
         padding: 0px;
+        height: auto;
+    }
+
+    .description-sedans,
+    .description-suvs,
+    .description-luxury {
+        min-height: auto;
     }
 
     .description-sedans {
