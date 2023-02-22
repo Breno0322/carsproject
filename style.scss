@@ -40,34 +40,34 @@ a {
 
 .description {
     padding: 50px;
-}
 
-.description-sedans {
-    background: var(--color-background-sedans);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
+    &.description-sedans {
+        background: var(--color-background-sedans);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
 
-.description-suvs {
-    background: var(--color-background-suvs);
-}
+    &.description-suvs {
+        background: var(--color-background-suvs);
+    }
 
-.description-luxury {
-    background: var(--color-background-luxury);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
+    &.description-luxury {
+        background: var(--color-background-luxury);
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
 
-.button-sedan {
-    color: var(--color-background-sedans);
-}
-
-.button-suvs {
-    color: var(--color-background-suvs);
-}
-
-.button-luxury {
-    color: var(--color-background-luxury);
+    .button-sedan {
+        color: var(--color-background-sedans);
+    }
+    
+    .button-suvs {
+        color: var(--color-background-suvs);
+    }
+    
+    .button-luxury {
+        color: var(--color-background-luxury);
+    }
 }
 
 /* Responsive (Desktop) */
@@ -76,19 +76,19 @@ a {
         height: 100vh;
     }
 
-    .description-sedans {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-        border-top-right-radius: 0;
-    }
-
-    .description-luxury {
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-        border-bottom-left-radius: 0;
-    }
-
     .description {
         min-height: 500px;
+
+        &.description-sedans {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-top-right-radius: 0;
+        }
+
+        &.description-luxury {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 0;
+        }
     }
 }
